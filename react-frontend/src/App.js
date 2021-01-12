@@ -5,19 +5,20 @@ import ListStockComponent from './components/ListStockComponent';
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
 import CreateStockComponent from './components/CreateStockComponent';
-import ViewStockComponent from './components/ViewStockComponent';
+import CreateUserComponent from './components/CreateUserComponent';
 
 function App() {
   return (
     <div>
         <Router>
-              <HeaderComponent />
+              <HeaderComponent/>
                 <div className="container">
                     <Switch> 
                           <Route path = "/" exact component = {ListStockComponent}></Route>
                           <Route path = "/stock" component = {ListStockComponent}></Route>
                           <Route path = "/add-stock/:id" component = {CreateStockComponent}></Route>
-                          <Route path = "/view-stock/:id" component = {ViewStockComponent}></Route>
+                          <Route path = "/user/:id" component ={CreateUserComponent}></Route>
+                          <Route component={Error} />
                           {/* <Route path = "/update-stock/:id" component = {UpdateStockComponent}></Route> */}
                     </Switch>
                 </div>

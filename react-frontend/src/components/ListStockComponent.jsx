@@ -18,9 +18,7 @@ class ListStockComponent extends Component {
             this.setState({stock: this.state.stock.filter(stock => stock.id !== id)});
         });
     }
-    viewStock(id){
-        this.props.history.push(`/view-stock/${id}`);
-    }
+
     editStock(id){
         this.props.history.push(`/add-stock/${id}`);
     }
@@ -65,7 +63,6 @@ class ListStockComponent extends Component {
                                              <td>
                                                  <button onClick={ () => this.editStock(stock.id)} className="btn btn-info">Güncelle </button>
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.deleteStock(stock.id)} className="btn btn-danger">Sil </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.viewStock(stock.id)} className="btn btn-info">Görüntüle </button>
                                              </td>
                                         </tr>
                                     )
