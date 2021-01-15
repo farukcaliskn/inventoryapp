@@ -92,12 +92,12 @@ class CreateStockComponent extends Component {
                                         </div>
                                         <div className = "form-group">
                                             <label> Miktar </label>
-                                            <input placeholder="Miktar" type="number" name="item_qty" className="form-control" 
+                                            <input placeholder="Miktar" type="number" min ="1" name="item_qty" className="form-control" 
                                                 value={this.state.item_qty} onChange={this.changeitem_qtyHandler}/>
                                         </div>
                                         <div className = "form-group">
                                             <label> Fiyat </label>
-                                            <input placeholder="Fiyat" type="number" name="item_price" className="form-control" 
+                                            <input placeholder="Fiyat" type="number" min ="0.1"name="item_price" className="form-control" 
                                                 value={this.state.item_price} onChange={this.changeitem_priceHandler}/>
                                         </div>
 

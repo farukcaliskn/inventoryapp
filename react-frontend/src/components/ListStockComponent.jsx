@@ -11,6 +11,8 @@ class ListStockComponent extends Component {
         this.addStock = this.addStock.bind(this);
         this.editStock = this.editStock.bind(this);
         this.deleteStock = this.deleteStock.bind(this);
+        this.addCart = this.addCart.bind(this);
+
     }
 
     deleteStock(id){
@@ -32,6 +34,9 @@ class ListStockComponent extends Component {
     addStock(){
         this.props.history.push('/add-stock/_add');
     }
+    addCart(){
+        console.log("Merhaba")
+    }
 
     render() {
         return (
@@ -50,6 +55,8 @@ class ListStockComponent extends Component {
                                     <th> Ürün Fiyatı </th>
                                     <th> Ürün Adedi</th>
                                     <th> İşlemler</th>
+                                    <th> Sepet</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -62,7 +69,11 @@ class ListStockComponent extends Component {
                                              <td> {stock.item_qty}</td>
                                              <td>
                                                  <button onClick={ () => this.editStock(stock.id)} className="btn btn-info">Güncelle </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.deleteStock(stock.id)} className="btn btn-danger">Sil </button>
+                                                 <button onClick={ () => this.deleteStock(stock.id)} className="btn btn-danger ml-1">Sil </button>
+                                             </td>
+                                             <td>
+                                             <button onClick = {() => this.addCart()} className="btn btn-success ml-1">Sepete Ekle</button>
+                                                 <input type="number" placeholder="Adet" name="qty_cart" style={{height: "32px", width: "58px"}}/>
                                              </td>
                                         </tr>
                                     )
