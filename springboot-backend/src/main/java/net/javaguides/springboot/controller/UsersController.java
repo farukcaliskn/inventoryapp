@@ -56,8 +56,8 @@ public class UsersController {
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id :" + id));
 
         employee.setUser_name(employeeDetails.getUser_name());
-        employee.setEmail(employeeDetails.getEmail());
-        employee.setPassword(employeeDetails.getPassword());
+        employee.setUser_email(employeeDetails.getUser_email());
+        employee.setUser_password(employeeDetails.getUser_password());
 
         Users updatedEmployee = usersRepository.save(employee);
         return ResponseEntity.ok(updatedEmployee);
@@ -77,3 +77,4 @@ public class UsersController {
 
 
 }
+,

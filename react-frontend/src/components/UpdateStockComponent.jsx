@@ -19,7 +19,8 @@ class UpdateStockComponent extends Component {
     componentDidMount(){
         StockService.getStockById(this.state.id).then( (res) =>{
             let stock = res.data;
-            this.setState({item_name: stock.item_name,
+            this.setState({
+                item_name: stock.item_name,
                 item_price: stock.item_price,
                 item_qty : stock.item_qty
             });

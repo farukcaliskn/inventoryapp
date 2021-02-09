@@ -18,21 +18,21 @@ public class Users {
     @Column(name = "user_name")
     private String user_name;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "user_email")
+    private String user_email;
 
-    @Column(name = "password")
-    private String password;
+    @Column(name = "user_password")
+    private String user_password;
 
     public Users() {
 
     }
 
-    public Users(long id, String user_name, String email, String password) {
+    public Users(long id, String user_name, String user_email, String user_password) {
         this.id = id;
         this.user_name = user_name;
-        this.email = email;
-        this.password = password;
+        this.user_email = user_email;
+        this.user_password = user_password;
     }
 
     public long getId() {
@@ -51,19 +51,19 @@ public class Users {
         this.user_name = user_name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUser_email() {
+        return user_email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUser_password() {
+        return user_password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUser_password(String user_password) {
+        this.user_password = user_password;
     }
 }
